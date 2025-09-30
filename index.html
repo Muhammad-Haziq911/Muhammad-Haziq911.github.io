@@ -1,14 +1,183 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Muhammad Haziq — Portfolio</title>
-  </head>
-  <body>
-    <h1>Muhammad Haziq</h1>
-    <p>Embedded systems, C/C++, device drivers, Yocto Linux, image pipelines, systemd.</p>
-    <p>Contact: haziq.tauseef@gmail.com</p>
-    <p>This site will soon be available at <strong>haziq911.is-a.dev</strong>.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Haziq — Embedded Software Developer</title>
+  <meta name="description" content="Embedded Software Developer — Yocto Linux, RTOS (C/C++), device drivers, systemd, sensor integration, camera/image pipelines." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0e13; --panel:#121622; --text:#e8eefc; --muted:#a9b1c7; --accent:#6cf0c2; --line:#22283a;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px; --pad:22px; --max:1080px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      background:radial-gradient(1200px 800px at 80% -10%, #1a2033 0%, #0b0e13 60%) no-repeat, var(--bg);
+      color:var(--text); line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{max-width:var(--max); margin:24px auto 0; padding:0 20px}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+    .brand .dot{width:12px; height:12px; border-radius:50%; background:var(--accent); box-shadow:0 0 24px var(--accent)}
+    .wrap{max-width:var(--max); margin:24px auto; padding:0 20px}
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+      border:1px solid var(--line); border-radius:var(--radius); padding:48px var(--pad);
+      box-shadow:var(--shadow);
+      display:grid; grid-template-columns:1.25fr .75fr; gap:26px;
+    }
+    .hero h1{margin:0 0 8px; font-size:clamp(28px, 5vw, 42px); line-height:1.15}
+    .hero p{margin:0; color:var(--muted)}
+    .chip{display:inline-block; border:1px solid var(--line); background:#0f1422; padding:8px 12px; border-radius:999px; font-size:14px; margin:10px 10px 0 0}
+    .cta{display:flex; gap:12px; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; font-weight:600; border:1px solid var(--line); background:#12192a; color:var(--text)
+    }
+    .btn.primary{background:var(--accent); color:#081015; border:none}
+    .grid{display:grid; gap:18px}
+    .two{grid-template-columns:1fr 1fr}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+      border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:var(--shadow)
+    }
+    h2{margin:0 0 14px; font-size:22px; letter-spacing:.3px}
+    .row{display:flex; align-items:flex-start; gap:14px}
+    .dotline{width:10px; height:10px; border-radius:50%; background:var(--accent); margin-top:9px; box-shadow:0 0 16px var(--accent)}
+    .when{color:var(--muted); font-size:14px}
+    ul.skills{display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:0; list-style:none}
+    ul.skills li{border:1px dashed var(--line); padding:8px 12px; border-radius:10px; background:#0f1422}
+    footer{opacity:.8; text-align:center; padding:26px 0 60px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .two{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="brand"><span class="dot"></span> Muhammad Haziq</div>
+      <nav>
+        <a href="#experience">Experience</a> &nbsp;·&nbsp;
+        <a href="#skills">Skills</a> &nbsp;·&nbsp;
+        <a href="#education">Education</a> &nbsp;·&nbsp;
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Embedded Software Developer</h1>
+        <p>Yocto Linux &amp; RTOS (C/C++), device drivers, board bring-up, systemd services, sensor integration over I²C/SPI/MIPI, and camera/image pipelines with GStreamer/OpenCV.</p>
+        <div>
+          <span class="chip">Yocto / OpenEmbedded</span>
+          <span class="chip">C / C++</span>
+          <span class="chip">Drivers &amp; BSP</span>
+          <span class="chip">GStreamer · OpenCV</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Contact</a>
+          <a class="btn" href="https://www.linkedin.com/in/muhammad--haziq/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:haziq.tauseef@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Currently</h2>
+        <p><strong>S-Tech Cameras — Embedded Software Developer</strong></p>
+        <p class="when">Jun 2025 – Present · Osborne Park, WA</p>
+        <p class="when">Previously: Apr 2025 – Jun 2025 · Embedded SW Dev</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="grid two" style="margin-top:24px">
+      <div class="card">
+        <h2>Experience</h2>
+
+        <div class="row">
+          <span class="dotline"></span>
+          <div>
+            <strong>S-Tech Cameras · Embedded Software Developer</strong>
+            <div class="when">Jun 2025 – Present · Osborne Park, WA</div>
+            <ul>
+              <li>Yocto-based Linux images; systemd services for camera pipeline lifecycle.</li>
+              <li>Driver &amp; BSP work; I²C/SPI/MIPI sensor bring-up; diagnostics tooling.</li>
+              <li>GStreamer &amp; OpenCV processing for capture, encode, and streaming.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:16px">
+          <span class="dotline"></span>
+          <div>
+            <strong>ECU Aimes Lab · Research Assistant</strong>
+            <div class="when">Nov 2023 – Jun 2024 · Joondalup, WA</div>
+            <p>Underwater comms research; prototyping, data acquisition &amp; analysis.</p>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:16px">
+          <span class="dotline"></span>
+          <div>
+            <strong>EPTeck · Embedded SoC Developer</strong>
+            <div class="when">Jun 2022 – Feb 2023 · Faisalabad, PK</div>
+            <p>Work on Xilinx Alveo acceleration cards; RTL/software integration.</p>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:16px">
+          <span class="dotline"></span>
+          <div>
+            <strong>Biomedical Lab, Riphah University · Embedded Engineer</strong>
+            <div class="when">Jan 2022 – Jun 2022</div>
+            <p>Ventilator controller (STM32 + FreeRTOS), TFT UI, pressure &amp; valve control.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="card">
+        <h2 id="skills">Core Skills</h2>
+        <ul class="skills">
+          <li>Yocto / OpenEmbedded</li><li>RTOS (FreeRTOS)</li><li>Device Drivers</li>
+          <li>C / C++</li><li>Board Bring-up</li><li>systemd</li>
+          <li>I²C / SPI / MIPI</li><li>GStreamer</li><li>OpenCV</li>
+          <li>Linux Tools</li>
+        </ul>
+
+        <div style="margin-top:18px">
+          <h2 id="education">Education</h2>
+          <p><strong>Edith Cowan University</strong><br/>
+            Master of Engineering Science — Underwater Communication Systems (2023–2025)</p>
+          <p><strong>PIEAS</strong><br/>B.E. Electrical &amp; Electronics Engineering (2018–2022)</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="grid" style="margin-top:18px">
+      <div class="card">
+        <h2>Get in touch</h2>
+        <p>Email: <a href="mailto:haziq.tauseef@gmail.com">haziq.tauseef@gmail.com</a> · Phone: <a href="tel:+61488169874">+61 488 169 874</a></p>
+        <p>Location: Edgewater / Joondalup, WA · <a href="https://www.linkedin.com/in/muhammad--haziq/" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Muhammad Haziq · Hosted on GitHub Pages
+  </footer>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
 </html>
